@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="full row flexJCC p1">
+        <div class="col w50">
+            <h2 class="m1">Create one more object for food items and merge with above created object to get a new object
+                and print it.</h2>
+
+            <form class="row flexAIC w50 m2 flexSB " onsubmit="event.preventDefault();addObj(this)">
+                <input type="text" name="obj" class="line p1 m1" style="width:80%" placeholder="Food Items">
+                <button type="submit" class="p1 brd m1 line" style="width:20%;  font-size: 22px;">Add</button>
+            </form>
+            <ul class="m3 vm0" id="ul">
+
+            </ul>
+            <h2 class="m1 ">Print all the [keys,value] of object</h2>
+            <button type="button" onclick="showKey()" class="p1 brd m2 vm0 line"
+                style="width:20%;  font-size: 14px;">Show Keys of Object</button>
+            <div class="row w50 m2 vm0">
+                <ul class="m3 vm0" id="ul2">
+                </ul>
+                <ul class="m3 vm0" id="ul3">
+                </ul>
+            </div>
+            <h2 class="m1">Prevent the Employee object from updation</h2>
+            <p class="m2 vm0">Employee: {empId:1,empName:"Ravi"}</p>
+            <p class="m2 vm0">Solution: Object.freeze(Employee)</p>
+            <button type="button" onclick="UpdateFail()" class="p1 brd m2 vm0 line"
+                style="width:20%;  font-size: 14px;">Try to Update See result on console</button>
+        </div>
+        <div class="col w50 lineleft p1">
+            <form class="col m2 form2" onsubmit="event.preventDefault();Submitted(this)">
+                <h3 class="m1">Form to take user input</h3>
+                <div class="row full flexAIC">
+                    <select name="position" class="m1 p1 w50" id="">
+                        <option value="cashier">cashier</option>
+                        <option value="manager">manager</option>
+                    </select>
+                    <select name="type" id="" class="m1 p1 w50">
+                        <option value="hourly">hourly</option>
+                        <option value="monthly">monthly</option>
+                        <option value="daily">daily</option>
+                    </select>
+                </div>
+                <div class="row flexAIC m2">
+                    <label for="">isAvailable</label>
+                    <input type="checkbox" name="isAvailable" id="" class="m1 p1 line">
+
+                </div>
+                <button type="submit" class="p1 m2 dbg">Submit</button>
+            </form>
+           <table id="table"></table>
+           
+           <button type="button" onclick="arrayConverter()" class="p1 brd m4  line w50"
+           style="font-size: 14px;">Try to Update See result on console</button>
+           <h3 class="m1">Print all the key values as an individual array, nested in an array</h3>
+           <h2 id="data"></h2>
+        </div>
+      
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
